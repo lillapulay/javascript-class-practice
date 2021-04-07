@@ -32,7 +32,7 @@ class Countries {
         .catch (err => console.log(err.message))
     }
 
-    // Returns bordering countries
+    // Returns bordering countries by name
     getBorderingCountries(name) {
         fetch(`${this.apiURL}/name/${name}`)
         .then (
@@ -40,6 +40,23 @@ class Countries {
         )
         .then (
             country => console.log(country[0].borders)
+        )
+        .catch (err => console.log(err.message))
+    }
+
+    // Returns countries by language code
+    getCountryByLanguage(language) {
+        fetch(`${this.apiURL}/lang/${language}`)
+        .then (
+            res => res.json()
+        )
+        .then (
+            countries => {
+              countries.map(
+                country => 
+              console.log(country.name)
+              )
+            }
         )
         .catch (err => console.log(err.message))
     }
@@ -51,4 +68,5 @@ const myCountries = new Countries ('https://restcountries.eu/rest/v2')
 // myCountries.getAllCountries()
 // myCountries.getCountryByName("Hungary")
 // myCountries.getCountryByName("Nederland") // Doesn't work with "Magyarország" for example - must be something with the accent on 'a' but couldn't figure
-// myCountries.getBorderingCountries("Finland")
+// myCountries.getBorderingCountries("Liechtenstein")
+// myCountries.getCountryByLanguage("DE")
