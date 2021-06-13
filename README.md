@@ -1,5 +1,9 @@
-# Advanced Javascript assignments
-.
+# JavaScript Class assignment
+
+Practice file for ES6 classes.
+
+See this Integrify assignment's instructions below.
+***
 
 ## Assignment 
 Write an ES6 class that does the following:
