@@ -85,7 +85,7 @@ const myCountries = new Countries ('https://restcountries.eu/rest/v2')
 // Calling functions
 // myCountries.getAllCountries()
 // myCountries.getCountryByName("Hungary")
-// myCountries.getCountryByName("Nederland") // Doesn't work with "Magyarország" for example - must be something with the accent on 'a' but couldn't figure
+// myCountries.getCountryByName("Nederland")
 // myCountries.getBorderingCountries("Liechtenstein")
 // myCountries.getCountryByLanguage("DE")
-// myCountries.getCountryByPopulation(900000000) // Not sure how to change to millions
+// myCountries.getCountryByPopulation(900000000)
